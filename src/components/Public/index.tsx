@@ -5,7 +5,7 @@ import StoryList from "./StoryList";
 import StoryItem from "./StoryItem";
 import UserList from "./UserList";
 import UserItem from "./UserItem";
-
+import FilterSection from './FilterSection'
 export {
     Header,
     MainSider,
@@ -14,4 +14,5 @@ export {
     StoryItem,
     UserList,
     UserItem,
+    FilterSection
 }
