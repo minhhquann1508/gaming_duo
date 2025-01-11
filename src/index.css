@@ -13,4 +13,9 @@
     font-weight: normal;
     font-style: normal;
 }
+
+.ant-select-show-search:where(.css-dev-only-do-not-override-7ny38l).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    cursor: text;
+    border-radius: 20px;
+}
   

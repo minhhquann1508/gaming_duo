@@ -11,7 +11,7 @@ const HomePage = () => {
                 <StoryList />
             </section>
             <section className="my-5">
-                <div className="mb-5">
+                <div className="my-8">
                     <FilterSection />
                 </div>
                 <Title level={4} style={{ marginBottom: 20 }}>Kết quả tìm kiếm</Title>
