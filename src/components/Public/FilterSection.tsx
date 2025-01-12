@@ -1,5 +1,6 @@
 import { Button, Input, Select } from "antd"
 import { Search } from "lucide-react";
+import { useState } from "react";
 
 const sexOptions = [
     {
@@ -32,6 +33,9 @@ const genreOptions = [
 ];
 
 const FilterSection = () => {
+    const [isReady, setIsReady] = useState<boolean>(false);
+    const [isOnline, setIsOnline] = useState<boolean>(false);
+
     return (
         <nav className="flex items-center justify-between">
             <div className="flex gap-2">
@@ -49,9 +53,20 @@ const FilterSection = () => {
                     optionFilterProp="label"
                     options={genreOptions}
                 />
-                <Button className="rounded-2xl">Sẵn sàng</Button>
-                <Button className="rounded-2xl">Online</Button>
-                <Button className="rounded-2xl w-[150px]">Khoảng giá</Button>
+                <Button
+                    type={isReady ? 'primary' : 'default'}
+                    className="rounded-2xl"
+                    onClick={() => setIsReady((prev) => !prev)}
+                >
+                    Sẵn sàng
+                </Button>
+                <Button
+                    type={isOnline ? 'primary' : 'default'}
+                    className="rounded-2xl"
+                    onClick={() => setIsOnline((prev) => !prev)}
+                >
+                    Online
+                </Button>
                 <Select
                     showSearch
                     style={{ width: 150 }}
