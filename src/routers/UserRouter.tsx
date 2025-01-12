@@ -1,5 +1,5 @@
 import { Layout } from "antd"
-import { Header, MainSider } from "../components/Public"
+import { Header } from "../components/Public"
 import { Content } from "antd/es/layout/layout"
 import { Route, Routes } from "react-router-dom";
 import { HomePage, NotFoundPage, UserDetailPage } from "../pages/Public";
@@ -21,9 +21,8 @@ const UserRouter = () => {
         <Layout style={layoutStyle}>
             <Header />
             <Layout>
-                <MainSider />
                 <Content style={contentStyle}>
-                    <div style={{ padding: '16px 32px' }}>
+                    <div>
                         <Routes>
                             <Route path="/" element={<HomePage />} />
                             <Route path="/:userId" element={<UserDetailPage />} />

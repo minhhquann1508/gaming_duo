@@ -24,9 +24,14 @@ export interface Rating {
 const { Title, Text } = Typography;
 
 const UserItem = ({ user }: { user: UserItemType }) => {
-    const { avatar, name, desc, games, rating, price } = user;
+    const { avatar, name, desc, games, rating, price, _id } = user;
+
     return (
-        <div className="border rounded-lg w-fit overflow-hidden cursor-pointer hover:border-gray-300">
+        <a
+            href={`/${_id}`}
+            target="_blank"
+            className="block border rounded-lg w-fit overflow-hidden cursor-pointer hover:border-gray-300"
+        >
             <div className="relative">
                 <img src={avatar} alt={name} />
                 <span
@@ -54,7 +59,7 @@ const UserItem = ({ user }: { user: UserItemType }) => {
                     <span className="flex items-center"><StarIcon size={16} /> <span className="font-bold ml-0.5">{rating.total}</span> <span className="font-bold ml-1">({rating.numberRating})</span></span>
                 </div>
             </div>
-        </div>
+        </a>
     )
 }
 
