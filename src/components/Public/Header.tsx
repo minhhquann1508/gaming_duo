@@ -1,15 +1,18 @@
 import { Button } from "antd"
 import { CameraIcon, Facebook, Globe, HomeIcon, Trophy, UserCheck2 } from "lucide-react"
+import { useNavigate } from "react-router-dom"
 
 const Header = () => {
+    const navigate = useNavigate();
+
     return (
         <header className="border-b">
             <div className="container mx-auto flex justify-between items-center py-3">
                 <div className="flex flex-1">
-                    <Button style={{ padding: 24 }} type="default" shape="circle" icon={<HomeIcon />} size={'large'} />
+                    <Button onClick={() => navigate('/')} style={{ padding: 24 }} type="default" shape="circle" icon={<HomeIcon />} size={'large'} />
                 </div>
                 <div className="flex-2 flex justify-center gap-3">
-                    <Button style={{ padding: 24 }} type="default" shape="circle" icon={<HomeIcon />} size={'large'} />
+                    <Button onClick={() => navigate('/')} style={{ padding: 24 }} type="default" shape="circle" icon={<HomeIcon />} size={'large'} />
                     <Button style={{ padding: 24 }} type="default" shape="circle" icon={<CameraIcon />} size={'large'} />
                     <Button style={{ padding: 24 }} type="default" shape="circle" icon={<Trophy />} size={'large'} />
                 </div>
